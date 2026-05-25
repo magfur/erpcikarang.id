@@ -1560,9 +1560,13 @@ function navTo(sectionId){
     const rect = el.getBoundingClientRect();
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
     const top = Math.max(0, rect.top + scrollTop - 70);
-    window.scrollTo({top: top, behavior:'smooth'});
-    document.documentElement.scrollTop = top;
-    document.body.scrollTop = top;
+    document.documentElement.style.scrollBehavior = 'auto';
+    document.body.style.scrollBehavior = 'auto';
+    window.scrollTo({top: top, behavior:'instant'});
+    setTimeout(()=>{
+      document.documentElement.style.scrollBehavior = '';
+      document.body.style.scrollBehavior = '';
+    }, 50);
   }
 
   if(!isHome){
@@ -1576,7 +1580,7 @@ function navTo(sectionId){
   }
 }
 
-function scrollTo(id){
+function scrollToSection(id){
   setTimeout(()=>{
     const el = document.getElementById(id);
     if(el) el.scrollIntoView({behavior:'smooth'});
