@@ -8,6 +8,7 @@
 <meta name="keywords" content="software ERP Cikarang, ERP Cikarang, software ERP Bekasi, ERP Bekasi, ERP kawasan industri Cikarang, ERP EJIP, ERP MM2100, ERP Jababeka, ERP BIIE, ERP Delta Silicon, software ERP pabrik Cikarang, ERP pabrik Cikarang, ERP manufaktur Cikarang, sistem ERP manufaktur Cikarang, sistem ERP manufaktur Bekasi, ERP pabrik Bekasi, software ERP untuk pabrik, software ERP terbaik, software pabrik murah, software ERP manufaktur Indonesia, ERP produksi Cikarang, MRP otomatis, inventory management pabrik, ERP Jakarta, ERP Surabaya, ERP Bandung"/>
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="MyERP+"/>
+<meta name="application-name" content="MyERP+"/>
 <link rel="canonical" href="https://erpcikarang.id/"/>
 
 <!-- Favicon -->
@@ -595,6 +596,85 @@ footer{background:#0a0f1e;padding:3rem 2.5rem 2rem;display:flex;flex-direction:c
   .stat-pill:nth-last-child(-n+2){border-bottom:none}
   .trust-bar{gap:1rem;padding:1.2rem 1rem}
   .trust-names{gap:1rem}
+}
+
+/* ===== MOBILE ENHANCEMENTS ===== */
+@media(max-width:768px){
+
+  /* === SECTION PADDING === */
+  .section{padding:3rem 1.2rem}
+  .section-header{margin-bottom:2rem}
+  .section-title{font-size:1.5rem!important}
+  .sec-sub{font-size:.88rem}
+
+  /* === HERO === */
+  .hero-text h1{font-size:clamp(1.6rem,6vw,2.2rem);text-align:center}
+  .hero-text p{font-size:.9rem;text-align:center}
+  .hero-text .btn-row{justify-content:center;flex-wrap:wrap;gap:.6rem}
+  .hero-text .btn-row button{width:100%;max-width:280px}
+  .hero-proof{justify-content:center}
+
+  /* === PRICING === */
+  .price-wrap{grid-template-columns:1fr;border-radius:12px}
+  .price-col{border-right:none!important;border-bottom:1px solid var(--line);border-radius:0!important}
+  .price-col:first-child{border-radius:12px 12px 0 0!important}
+  .price-col:last-child{border-bottom:none;border-radius:0 0 12px 12px!important}
+  .price-col.featured{transform:none;box-shadow:none;margin:0;border-radius:0!important}
+  .price-col.featured::before{top:-12px}
+  .price-amount{font-size:1.8rem}
+
+  /* === KOTA CARDS === */
+  .kota-grid{grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+
+  /* === PROCESS / CARA KERJA === */
+  .process-visual{gap:1.5rem}
+  .proc-num{font-size:1.8rem}
+
+  /* === BLOG CARDS === */
+  .blog-card{min-width:75vw;max-width:75vw}
+
+  /* === FAQ === */
+  .faq-sidebar{grid-template-columns:1fr;gap:.75rem}
+
+  /* === ARTICLE PAGE === */
+  .article-hero{height:240px}
+  .article-hero-content{padding:1.2rem}
+  .article-hero-title{font-size:1.1rem}
+  .article-body{padding:1.5rem 1rem}
+  .article-content h3{font-size:1rem}
+  .article-content p{font-size:.88rem}
+  .related-grid{grid-template-columns:1fr 1fr;gap:.75rem}
+
+  /* === CTA SECTION === */
+  .cta-inner{text-align:center;gap:1.5rem}
+  .cta-inner h2{font-size:1.4rem}
+  .cta-inner button{width:100%}
+
+  /* === TRUST BAR === */
+  .trust-bar{flex-direction:column;gap:.75rem;text-align:center}
+  .trust-names{justify-content:center;flex-wrap:wrap}
+
+  /* === MODULE CARDS === */
+  .module-card{padding:1.5rem 1.2rem}
+
+  /* === FORM DEMO === */
+  .demo-grid{grid-template-columns:1fr!important}
+  .demo-form{padding:1.5rem 1.2rem}
+
+  /* === STATS PILLS === */
+  .hero-stats-panel{margin-top:1.5rem}
+
+  /* === WA FLOAT === */
+  .wa-float{bottom:1.2rem;right:1rem}
+  .wa-chat-widget{width:calc(100vw - 2rem);right:1rem;bottom:5rem}
+}
+
+@media(max-width:480px){
+  .kota-grid{grid-template-columns:1fr}
+  .related-grid{grid-template-columns:1fr}
+  .blog-card{min-width:85vw;max-width:85vw}
+  .article-hero{height:200px}
+  .price-col{padding:1.5rem 1.2rem}
 }
 </style>
 </head>
