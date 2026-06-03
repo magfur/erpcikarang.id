@@ -12,8 +12,9 @@
 <link rel="canonical" href="https://erpcikarang.id/"/>
 
 <!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg"/>
-<link rel="apple-touch-icon" href="/assets/favicon.svg"/>
+<link rel="apple-touch-icon" href="/favicon.svg"/>
 <meta name="theme-color" content="#1252cc"/>
 
 <!-- Google Analytics GA4 -->
@@ -23,6 +24,12 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-N5DZZNHNBR');
+</script>
+
+<!-- Google Ads Conversion Tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17541248777"></script>
+<script>
+  gtag('config', 'AW-17541248777');
 </script>
 
 <!-- Open Graph -->
@@ -598,83 +605,142 @@ footer{background:#0a0f1e;padding:3rem 2.5rem 2rem;display:flex;flex-direction:c
   .trust-names{gap:1rem}
 }
 
-/* ===== MOBILE ENHANCEMENTS ===== */
+/* ===== MOBILE RESPONSIVE OVERHAUL ===== */
 @media(max-width:768px){
 
-  /* === SECTION PADDING === */
-  .section{padding:3rem 1.2rem}
-  .section-header{margin-bottom:2rem}
-  .section-title{font-size:1.5rem!important}
-  .sec-sub{font-size:.88rem}
+  /* === GLOBAL === */
+  body{font-size:15px}
+  .section{padding:3rem 1.25rem}
+  .section-inner{padding:0}
+  h2{font-size:1.5rem!important;letter-spacing:-.2px}
+  .sec-sub{font-size:.87rem;max-width:100%}
+  .sec-label{font-size:.68rem}
+
+  /* === NAV === */
+  nav{padding:0 1.25rem;height:58px}
 
   /* === HERO === */
-  .hero-text h1{font-size:clamp(1.6rem,6vw,2.2rem);text-align:center}
-  .hero-text p{font-size:.9rem;text-align:center}
-  .hero-text .btn-row{justify-content:center;flex-wrap:wrap;gap:.6rem}
-  .hero-text .btn-row button{width:100%;max-width:280px}
-  .hero-proof{justify-content:center}
+  .hero-wrap{padding:2rem 1.25rem 0}
+  h1{font-size:1.7rem;text-align:center}
+  .hero-label{font-size:.65rem;justify-content:center;display:flex;width:100%}
+  .hero-desc{font-size:.88rem;text-align:center;margin:0 auto 1.2rem}
+  .hero-cta{flex-direction:column;align-items:stretch;gap:.7rem}
+  .btn-white,.btn-outline-white{width:100%;text-align:center;padding:.82rem 1rem;font-size:.88rem}
+  .hero-proof{flex-wrap:wrap;gap:0;padding-top:1.2rem}
+  .hero-proof>div{flex:0 0 50%;padding:.5rem .8rem;border-right:none!important;border-bottom:1px solid rgba(255,255,255,.12)}
+  .hero-proof>div:nth-child(odd){border-right:1px solid rgba(255,255,255,.12)!important}
+  .hero-proof>div:nth-last-child(-n+2){border-bottom:none}
+  .proof-num{font-size:1.2rem}
+  .proof-label{font-size:.62rem}
 
-  /* === PRICING === */
-  .price-wrap{grid-template-columns:1fr;border-radius:12px}
-  .price-col{border-right:none!important;border-bottom:1px solid var(--line);border-radius:0!important}
-  .price-col:first-child{border-radius:12px 12px 0 0!important}
-  .price-col:last-child{border-bottom:none;border-radius:0 0 12px 12px!important}
-  .price-col.featured{transform:none;box-shadow:none;margin:0;border-radius:0!important}
-  .price-col.featured::before{top:-12px}
-  .price-amount{font-size:1.8rem}
-
-  /* === KOTA CARDS === */
-  .kota-grid{grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
-
-  /* === PROCESS / CARA KERJA === */
-  .process-visual{gap:1.5rem}
-  .proc-num{font-size:1.8rem}
-
-  /* === BLOG CARDS === */
-  .blog-card{min-width:75vw;max-width:75vw}
-
-  /* === FAQ === */
-  .faq-sidebar{grid-template-columns:1fr;gap:.75rem}
-
-  /* === ARTICLE PAGE === */
-  .article-hero{height:240px}
-  .article-hero-content{padding:1.2rem}
-  .article-hero-title{font-size:1.1rem}
-  .article-body{padding:1.5rem 1rem}
-  .article-content h3{font-size:1rem}
-  .article-content p{font-size:.88rem}
-  .related-grid{grid-template-columns:1fr 1fr;gap:.75rem}
-
-  /* === CTA SECTION === */
-  .cta-inner{text-align:center;gap:1.5rem}
-  .cta-inner h2{font-size:1.4rem}
-  .cta-inner button{width:100%}
-
-  /* === TRUST BAR === */
-  .trust-bar{flex-direction:column;gap:.75rem;text-align:center}
-  .trust-names{justify-content:center;flex-wrap:wrap}
+  /* === STATS PANEL === */
+  .hero-stats-panel{grid-template-columns:1fr 1fr;margin-top:.75rem;margin-bottom:1.5rem}
+  .stat-pill{padding:.55rem .8rem}
+  .stat-pill-num{font-size:1rem}
+  .stat-pill-label{font-size:.55rem;white-space:normal}
 
   /* === MODULE CARDS === */
+  .module-showcase{border-radius:12px;margin-top:2rem}
   .module-card{padding:1.5rem 1.2rem}
+  .module-icon-wrap{width:42px;height:42px;font-size:1.1rem;margin-bottom:.75rem}
+  .module-name{font-size:.95rem}
+  .module-desc{font-size:.8rem}
 
-  /* === FORM DEMO === */
-  .demo-grid{grid-template-columns:1fr!important}
-  .demo-form{padding:1.5rem 1.2rem}
+  /* === KOTA CARDS === */
+  .kota-section{padding:3rem 1.25rem}
+  .kota-grid{grid-template-columns:1fr 1fr;gap:.85rem;margin-top:1.75rem}
+  .kota-card{padding:1.3rem 1rem}
+  .kota-name{font-size:1rem}
+  .kota-desc{font-size:.78rem}
 
-  /* === STATS PILLS === */
-  .hero-stats-panel{margin-top:1.5rem}
+  /* === PROCESS === */
+  .process-grid{gap:1.75rem;margin-top:2rem}
+  .proc-num{font-size:2rem}
+  .proc-title{font-size:.95rem}
+  .proc-text{font-size:.82rem}
+  .process-visual{padding:1.75rem 1.2rem;gap:1.5rem;border-radius:12px;margin-top:2rem}
+  .pv-text h3{font-size:1.05rem}
+  .pv-text p{font-size:.83rem}
+  .pv-step{padding:.7rem .85rem}
+  .pv-step-label{font-size:.78rem}
+
+  /* === PRICING === */
+  .price-wrap{margin-top:2.5rem;border-radius:12px}
+  .price-col{padding:1.75rem 1.4rem}
+  .price-col.featured{transform:none!important;animation:none!important;border-radius:0!important}
+  .price-col.featured::before{font-size:.65rem;padding:.22rem 1rem}
+  .price-tier{font-size:.68rem}
+  .price-amount{font-size:2rem}
+  .price-feat{font-size:.82rem;padding:.48rem 0}
+  .price-cta{padding:.75rem;font-size:.82rem;margin-top:1.5rem}
+
+  /* === BLOG === */
+  .blog-card{flex:0 0 78vw;min-width:78vw}
+  .blog-thumb{height:140px}
+  .blog-title{font-size:.85rem}
+  .blog-excerpt{font-size:.78rem;-webkit-line-clamp:2}
+
+  /* === ARTICLE PAGE === */
+  .article-hero{height:220px}
+  .article-hero-content{padding:1rem 1.25rem}
+  .article-hero-title{font-size:1.05rem}
+  .article-back{font-size:.75rem;padding:.35rem .65rem}
+  .article-body{padding:2rem 1.25rem}
+  .article-meta{gap:.85rem;padding-bottom:1.2rem;margin-bottom:1.5rem}
+  .article-meta-item{font-size:.73rem}
+  .article-content h3{font-size:1rem;margin:1.5rem 0 .6rem}
+  .article-content p{font-size:.87rem;line-height:1.8}
+  .article-content ul li{font-size:.85rem}
+  .article-content .highlight-box{padding:1rem 1.1rem;margin:1.2rem 0}
+  .article-related{padding:2rem 1.25rem}
+  .related-grid{grid-template-columns:1fr 1fr;gap:.75rem}
+  .related-thumb{height:80px}
+  .related-body{padding:.7rem}
+  .related-title{font-size:.78rem}
+
+  /* === FAQ === */
+  .faq-layout{gap:2rem;margin-top:2rem}
+  .faq-sidebar{grid-template-columns:1fr 1fr}
+  .faq-stat-card{padding:1rem 1.1rem;gap:.75rem}
+  .faq-stat-num{font-size:1rem}
+  .faq-stat-label{font-size:.68rem}
+  .faq-q{font-size:.92rem}
+  .faq-a{font-size:.83rem}
+  .faq-q-wrap{padding:1.2rem 0}
+
+  /* === CTA / FORM === */
+  .cta-section{padding:3.5rem 1.25rem}
+  .cta-heading{font-size:1.4rem}
+  .cta-desc{font-size:.87rem}
+  .form-field,.form-select{font-size:.87rem;padding:.9rem .65rem}
+  .form-submit{font-size:.87rem;padding:.88rem 1.5rem;margin-top:1.5rem}
+
+  /* === FOOTER === */
+  footer{padding:2.5rem 1.25rem 1.75rem;gap:1.2rem}
+  .foot-nav{gap:1.2rem}
+  .foot-nav a{font-size:.78rem}
 
   /* === WA FLOAT === */
-  .wa-float{bottom:1.2rem;right:1rem}
-  .wa-chat-widget{width:calc(100vw - 2rem);right:1rem;bottom:5rem}
+  .wa-float{bottom:1.25rem;right:1rem}
+  .wa-btn{width:52px;height:52px}
+  .wa-btn svg{width:24px;height:24px}
+  .wa-chat-widget{width:calc(100vw - 2rem);right:1rem;bottom:4.75rem}
+  .wa-chat-body{height:280px}
 }
 
-@media(max-width:480px){
+/* === SMALL PHONES (≤420px) === */
+@media(max-width:420px){
+  h1{font-size:1.5rem}
+  h2{font-size:1.35rem!important}
   .kota-grid{grid-template-columns:1fr}
   .related-grid{grid-template-columns:1fr}
-  .blog-card{min-width:85vw;max-width:85vw}
-  .article-hero{height:200px}
-  .price-col{padding:1.5rem 1.2rem}
+  .faq-sidebar{grid-template-columns:1fr}
+  .faq-cta-box{grid-column:unset}
+  .blog-card{flex:0 0 86vw;min-width:86vw}
+  .hero-stats-panel{grid-template-columns:1fr 1fr}
+  .price-col{padding:1.5rem 1.1rem}
+  .price-amount{font-size:1.8rem}
+  .article-hero{height:190px}
 }
 </style>
 </head>
